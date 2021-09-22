@@ -18,7 +18,7 @@
 */
 
 // uncomment the below line to enable five button support
-//#define FIVEBUTTONS
+#define FIVEBUTTONS
 
 static const uint32_t cardCookie = 322417479;
 
@@ -719,6 +719,10 @@ void waitForTrackToFinish() {
 }
 
 void setup() {
+
+  // Switch on Power LED connected to D5
+  pinMode(5, OUTPUT);
+  digitalWrite(5, HIGH);
 
   Serial.begin(115200); // Es gibt ein paar Debug Ausgaben über die serielle Schnittstelle
 
